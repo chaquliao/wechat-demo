@@ -1,0 +1,10 @@
+ <!-- wxml是编写小程序骨架的文件 -->
+<view class='container'>
+<!-- <image src='/images/ES.jpg' style='width:750rpx'></image> -->
+    <image class='user-avatar' src="/images/apaLogo.png"></image>
+    <!-- 只有用text标签的，才能长按选中 -->
+    <text class='user-name'>Hello,APA</text> 
+    <view class='moto-container' bindtap='tapEnterJourney'>
+        <text class='moto' catchtap='onSubTap'>APA Journey</text>
+    </view>
+</view>

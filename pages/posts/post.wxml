@@ -1,0 +1,22 @@
+<import src="post-item/post-item-template.wxml" />
+
+<view>
+  <swiper class='swiper-container' indicator-dots='true' indicator-active-color="#c62f2f" autoplay='true' interval='3000'>
+    <swiper-item>
+      <image src='/images/swiper-stefanie.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/swiper-mayday.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/swiper-xiangsheng.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <!-- template模板化,而非模块化,template里面不能写js -->
+  <block wx:for="{{post_key}}" wx:for-item="item" wx:for-index="idx">
+  <!-- 自定义属性，必须是data开头 -->
+    <view catchtap="onPostTap" data-postId="{{item.pid}}">
+      <template is="postItem" data="{{...item}}" />
+    </view>
+  </block>
+</view>
