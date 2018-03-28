@@ -13,8 +13,7 @@ Page({
     console.log("subTap")
   },
 
-  onUnload(){  //被关闭或者卸载-->redirectTo
-    // console.log("onUnload")
+  onUnload(){
   },
 
   onHide() {    //被隐藏-->navigateTo
